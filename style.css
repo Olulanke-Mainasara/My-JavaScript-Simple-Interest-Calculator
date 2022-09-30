@@ -1,0 +1,46 @@
+body {
+    height: 100vh;
+    background-color: black;
+    font-family: arial;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    color: grey;
+    font-family: verdana;
+    margin-bottom: 35px;
+}
+
+.maindiv {
+    background-color: white;
+    color: black;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 25px;
+   
+}
+
+.form {
+    width: fit-content;
+    margin: auto;
+}
+
+#principal {
+    margin-left: 60px;
+}
+
+#rate {
+    margin-left: 23px;
+}
+
+#years {
+    margin-left: 30px;
+}
+
+footer {
+    margin: 0 0 20px 0;
+}
