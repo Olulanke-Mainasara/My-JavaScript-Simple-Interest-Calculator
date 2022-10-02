@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 body {
     height: 100vh;
-    background-color: black;
+    background: linear-gradient(135deg, black 45%, burlywood);
     font-family: arial;
     color: white;
     display: flex;
@@ -9,17 +16,56 @@ body {
 
 }
 
+.square {
+    position: absolute;
+    background: burlywood;
+    border: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    animation: animate 10s linear infinite;
+    z-index: 999;
+    top: -105px;
+    left: -105px;
+    height: 80px;
+    width: 80px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(685px, 0);
+        background: black;
+    }
+    50% {
+        transform: translate(685px, 705px);
+        background: black;
+    }
+    75% {
+        transform: translate(0px, 705px);
+        background: burlywood;
+    }
+    100% {
+        transform: translate(0, 0);
+        background: burlywood;
+    }
+}
+
 h1 {
-    color: grey;
+    color: white;
     font-family: verdana;
     margin-bottom: 35px;
 }
 
 .maindiv {
-    background-color: white;
-    color: black;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    color: white;
     width: fit-content;
-    padding: 20px;
+    padding: 40px;
     border-radius: 25px;
    
 }
@@ -29,18 +75,116 @@ h1 {
     margin: auto;
 }
 
+.form label, #rate_val {
+    font-size: 20px;
+}
+
+.form input[type="number"] {
+    font-size: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 10px;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 25px;
+    color: burlywood;
+    background: none;
+    border: 3px solid burlywood;
+    border-radius: 30px;
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 230px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: black;
+    border: 3px solid burlywood;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.slider::-webkit-slider-thumb:hover, input::-webkit-inner-spin-button:hover {
+    opacity: 1;
+}
+
+.slider::-moz-slider-thumb {
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#years {
+    font-size: 20px;
+    width: 100px;
+    padding: 5px;
+    border:3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+button {
+    color: burlywood;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    background: white;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.5s;
+}
+
+button:hover {
+    color: burlywood;
+    background: black;
+    cursor: pointer;
+}
+
 #principal {
-    margin-left: 60px;
+    margin-left: 67px;
 }
 
 #rate {
     margin-left: 23px;
+    margin-right: 23px;
 }
 
 #years {
     margin-left: 30px;
 }
 
+#result {
+    font-size: 20px;
+}
+
 footer {
     margin: 0 0 20px 0;
+    font-size: 20px;
+    text-align: center;
 }

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="style.css"></head>
 <body>
     <div class="maindiv">
+        <div class="square" style="-i:0;"></div>
+
         <h1>Simple Interest Calculator</h1>
 
         <div class="form">
@@ -20,7 +22,7 @@
             <br><br>
             
             <label for="rate">Interest Rate</label>
-            <input onchange="updateRate()" type="range"  id="rate" min="1" max="20" step="0.25" value="10.25">
+            <input onchange="updateRate()" type="range"  id="rate" class="slider" min="1" max="20" step="0.25" value="10.25">
             <span id="rate_val">10.25%</span>
             <br><br>
 
@@ -44,14 +46,17 @@
             <br><br>
 
             <span id="result">
-                
+                If you deposit : <br>
+                at an interest rate of : <br>
+                You will receive an amount of : <br>
+                in the year : <br>
             </span>
             <br>
         </div>
 
         <footer>
             &#169; Everyone Can Get Rich<br>
-            This Calculator belongs to Mainasara
+            This Calculator belongs to Grim_redd
         </footer>
     </div>
 </body>
