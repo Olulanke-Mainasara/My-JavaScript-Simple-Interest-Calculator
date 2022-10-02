@@ -24,11 +24,11 @@ body {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     animation: animate 10s linear infinite;
-    z-index: 999;
     top: -105px;
     left: -105px;
     height: 80px;
     width: 80px;
+    z-index: 999;
 }
 
 @keyframes animate {
@@ -50,6 +50,43 @@ body {
     100% {
         transform: translate(0, 0);
         background: burlywood;
+    }
+}
+
+.square2 {
+    position: absolute;
+    background: black;
+    border: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    animation: animate2 10s linear infinite;
+    bottom: -105px;
+    right: -105px;
+    height: 80px;
+    width: 80px;
+    z-index: 999;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-685px, 0);
+        background: burlywood;
+    }
+    50% {
+        transform: translate(-685px, -705px);
+        background: burlywood;
+    }
+    75% {
+        transform: translate(0px, -705px);
+        background: black;
+    }
+    100% {
+        transform: translate(0, 0);
+        background: black;
     }
 }
 
@@ -91,16 +128,6 @@ h1 {
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 25px;
-    color: burlywood;
-    background: none;
-    border: 3px solid burlywood;
-    border-radius: 30px;
-    cursor: pointer;
-    opacity: 0.5;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
 }
 
 .slider {
@@ -128,7 +155,7 @@ input::-webkit-inner-spin-button {
     transition: opacity 0.5s;
 }
 
-.slider::-webkit-slider-thumb:hover, input::-webkit-inner-spin-button:hover {
+.slider::-webkit-slider-thumb:hover {
     opacity: 1;
 }
 
@@ -142,12 +169,13 @@ input::-webkit-inner-spin-button {
 
 #years {
     font-size: 20px;
-    width: 100px;
+    width: fit-content;
     padding: 5px;
     border:3px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
+    margin-left: 30px;
 }
 
 button {
@@ -168,15 +196,12 @@ button:hover {
 
 #principal {
     margin-left: 67px;
+    text-align: center;
 }
 
 #rate {
     margin-left: 23px;
     margin-right: 23px;
-}
-
-#years {
-    margin-left: 30px;
 }
 
 #result {
@@ -187,4 +212,50 @@ footer {
     margin: 0 0 20px 0;
     font-size: 20px;
     text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .square, .square2 {
+        display: none;
+    }
+
+    h1 {
+        margin: 8px 0 20px;
+    }
+
+    #principal {
+        text-align: center;
+        width: 80%;
+        margin: 10px 0 10px;
+    }
+
+    #rate {
+        width: 100%;
+        margin: 10px 0 10px;
+    }
+
+    .maindiv {
+        margin: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .slider::-webkit-slider-thumb {
+        opacity: 1;
+    }
+
+    #years {
+        width: fit-content;
+    }
+
+    button {
+        color: burlywood;
+        background: black;
+    }
+
+    footer {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+        text-align: center;
+    }
 }
