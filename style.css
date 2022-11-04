@@ -6,88 +6,57 @@
 }
 
 body {
-    height: 100vh;
     background: linear-gradient(135deg, black 45%, burlywood);
+}
+
+.alphacontainer {
+    height: 100vh;
     font-family: arial;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    overflow: hidden;
 }
 
-.square {
+#header-text {
+    font-size: 80px;
+    letter-spacing: 20px;
+}
+
+.glide {
+    position: relative;
+}
+
+.prev, .next {
     position: absolute;
-    background: burlywood;
-    border: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    animation: animate 10s linear infinite;
-    top: -105px;
-    left: -105px;
-    height: 80px;
-    width: 80px;
-    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    color: white;
 }
 
-@keyframes animate {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(685px, 0);
-        background: black;
-    }
-    50% {
-        transform: translate(685px, 705px);
-        background: black;
-    }
-    75% {
-        transform: translate(0px, 705px);
-        background: burlywood;
-    }
-    100% {
-        transform: translate(0, 0);
-        background: burlywood;
-    }
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.square2 {
-    position: absolute;
-    background: black;
-    border: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    animation: animate2 10s linear infinite;
-    bottom: -105px;
-    right: -105px;
-    height: 80px;
-    width: 80px;
-    z-index: 999;
+.prev {
+    left: 30px;
 }
 
-@keyframes animate2 {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(-685px, 0);
-        background: burlywood;
-    }
-    50% {
-        transform: translate(-685px, -705px);
-        background: burlywood;
-    }
-    75% {
-        transform: translate(0px, -705px);
-        background: black;
-    }
-    100% {
-        transform: translate(0, 0);
-        background: black;
-    }
+.next {
+    right: 30px;
+}
+
+.slideWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
 }
 
 h1 {
@@ -96,7 +65,7 @@ h1 {
     margin-bottom: 35px;
 }
 
-.maindiv {
+.calc-1, .calc-2, .calc-3, .calc-4, .calc-5 {
     position: relative;
     background: rgba(255, 255, 255, 0.1);
     border: 3px solid rgba(255, 255, 255, 0.1);
@@ -105,6 +74,10 @@ h1 {
     padding: 40px;
     border-radius: 25px;
    
+}
+
+.calc-1 h1, .calc-2 h1, .calc-3 h1, .calc-4 h1, .calc-5 h1 {
+    text-align: center;
 }
 
 .form {

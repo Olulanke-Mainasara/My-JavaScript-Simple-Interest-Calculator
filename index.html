@@ -7,59 +7,272 @@
 
     <title>Web App - Simple Interest Calculator</title>
 
-    <script src="script.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css">
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/aae4243485.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="maindiv">
-        <div class="square"></div>
-        <div class="square2"></div>
+    <div class="alphacontainer">
+        <h1 id="header-text">The Answer</h1>
 
-        <h1>Simple Interest Calculator</h1>
+        <div class="glide">
+            <div class="glide__arrows" data-glide-el="controls">
+                <a class="prev glide__arrow glide__arrow--prev" data-glide-dir="<" href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                <a class="next glide__arrow glide__arrow--next" data-glide-dir=">" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+    
+            <div class="glide-track" data-glide-el="track">
+                <ul class="glide_slides slideWrap">
+                    <li class="calc-1 glide_slide">
+                        <h1>Simple Interest Calculator</h1>
+                
+                        <div class="form">
+                            <label for="principal">Amount</label>
+                            <input type="number"  id="principal">  
+                            <br><br>
+                            
+                            <label for="rate">Interest Rate</label>
+                            <input onchange="updateRate()" type="range"  id="rate" class="slider" min="1" max="20" step="0.25" value="10.25">
+                            <span id="rate_val">10.25%</span>
+                            <br><br>
+                
+                            <label for="years">No. of years</label>
+                            <select  id="years">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <br><br>
+                
+                            <!-------Interest-------->
+                            <button onclick="compute()">Compute Interest</button>
+                            <br><br>
+                
+                            <span id="result">
+                                If you deposit : <br>
+                                at an interest rate of : <br>
+                                You will receive an amount of : <br>
+                                in the year : <br>
+                            </span>
+                            <br>
+                        </div>
+                
+                        <footer>
+                            &#169; Everyone Can Get Rich<br>
+                            This Calculator belongs to Grim_redd
+                        </footer>
+                    </li>
 
-        <div class="form">
-            <label for="principal">Amount</label>
-            <input type="number"  id="principal">  
-            <br><br>
-            
-            <label for="rate">Interest Rate</label>
-            <input onchange="updateRate()" type="range"  id="rate" class="slider" min="1" max="20" step="0.25" value="10.25">
-            <span id="rate_val">10.25%</span>
-            <br><br>
 
-            <label for="years">No. of years</label>
-            <select  id="years">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <br><br>
+                    <li class="calc-2 glide_slide">
+                        <h1>Scientific Calculator</h1>
+                
+                        <div class="form">
+                            <label for="principal">Amount</label>
+                            <input type="number"  id="principal">  
+                            <br><br>
+                            
+                            <label for="rate">Interest Rate</label>
+                            <input onchange="updateRate()" type="range"  id="rate" class="slider" min="1" max="20" step="0.25" value="10.25">
+                            <span id="rate_val">10.25%</span>
+                            <br><br>
+                
+                            <label for="years">No. of years</label>
+                            <select  id="years">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <br><br>
+                
+                            <!-------Interest-------->
+                            <button onclick="compute()">Compute Interest</button>
+                            <br><br>
+                
+                            <span id="result">
+                                If you deposit : <br>
+                                at an interest rate of : <br>
+                                You will receive an amount of : <br>
+                                in the year : <br>
+                            </span>
+                            <br>
+                        </div>
+                
+                        <footer>
+                            &#169; Everyone Can Get Rich<br>
+                            This Calculator belongs to Grim_redd
+                        </footer>
+                    </li>
 
-            <!-------Interest-------->
-            <button onclick="compute()">Compute Interest</button>
-            <br><br>
 
-            <span id="result">
-                If you deposit : <br>
-                at an interest rate of : <br>
-                You will receive an amount of : <br>
-                in the year : <br>
-            </span>
-            <br>
+                    <li class="calc-3 glide_slide">              
+                        <h1>Basic Calculator</h1>
+                
+                        <div class="form">
+                            <label for="principal">Amount</label>
+                            <input type="number"  id="principal">  
+                            <br><br>
+                            
+                            <label for="rate">Interest Rate</label>
+                            <input onchange="updateRate()" type="range"  id="rate" class="slider" min="1" max="20" step="0.25" value="10.25">
+                            <span id="rate_val">10.25%</span>
+                            <br><br>
+                
+                            <label for="years">No. of years</label>
+                            <select  id="years">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <br><br>
+                
+                            <!-------Interest-------->
+                            <button onclick="compute()">Compute Interest</button>
+                            <br><br>
+                
+                            <span id="result">
+                                If you deposit : <br>
+                                at an interest rate of : <br>
+                                You will receive an amount of : <br>
+                                in the year : <br>
+                            </span>
+                            <br>
+                        </div>
+                
+                        <footer>
+                            &#169; Everyone Can Get Rich<br>
+                            This Calculator belongs to Grim_redd
+                        </footer>
+                    </li>
+
+
+                    <li class="calc-4 glide_slide">
+                        <h1>Currency Converter</h1>
+                
+                        <div class="form">
+                            <label for="principal">Amount</label>
+                            <input type="number"  id="principal">  
+                            <br><br>
+                            
+                            <label for="rate">Interest Rate</label>
+                            <input onchange="updateRate()" type="range"  id="rate" class="slider" min="1" max="20" step="0.25" value="10.25">
+                            <span id="rate_val">10.25%</span>
+                            <br><br>
+                
+                            <label for="years">No. of years</label>
+                            <select  id="years">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <br><br>
+                
+                            <!-------Interest-------->
+                            <button onclick="compute()">Compute Interest</button>
+                            <br><br>
+                
+                            <span id="result">
+                                If you deposit : <br>
+                                at an interest rate of : <br>
+                                You will receive an amount of : <br>
+                                in the year : <br>
+                            </span>
+                            <br>
+                        </div>
+                
+                        <footer>
+                            &#169; Everyone Can Get Rich<br>
+                            This Calculator belongs to Grim_redd
+                        </footer>
+                    </li>
+
+
+                    <li class="calc-5 glide_slide">
+                        <h1>Fraction Calculator</h1>
+                
+                        <div class="form">
+                            <label for="principal">Amount</label>
+                            <input type="number"  id="principal">  
+                            <br><br>
+                            
+                            <label for="rate">Interest Rate</label>
+                            <input onchange="updateRate()" type="range"  id="rate" class="slider" min="1" max="20" step="0.25" value="10.25">
+                            <span id="rate_val">10.25%</span>
+                            <br><br>
+                
+                            <label for="years">No. of years</label>
+                            <select  id="years">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <br><br>
+                
+                            <!-------Interest-------->
+                            <button onclick="compute()">Compute Interest</button>
+                            <br><br>
+                
+                            <span id="result">
+                                If you deposit : <br>
+                                at an interest rate of : <br>
+                                You will receive an amount of : <br>
+                                in the year : <br>
+                            </span>
+                            <br>
+                        </div>
+                
+                        <footer>
+                            &#169; Everyone Can Get Rich<br>
+                            This Calculator belongs to Grim_redd
+                        </footer>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <footer>
-            &#169; Everyone Can Get Rich<br>
-            This Calculator belongs to Grim_redd
-        </footer>
     </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
