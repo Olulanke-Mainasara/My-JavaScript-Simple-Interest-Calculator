@@ -66,22 +66,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-.calc-1, .calc-2, .calc-3, .calc-4, .calc-5 {
-    position: relative;
-    background: rgba(255, 255, 255, 0.1);
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    width: fit-content;
-    padding: 40px;
-    border-radius: 25px;
-   
-}
-
-.calc-1 h1, .calc-2 h1, .calc-3 h1, .calc-4 h1, .calc-5 h1 {
-    text-align: center;
-    font-weight: 300;
-}
-
 .form {
     width: fit-content;
     margin: auto;
@@ -185,9 +169,20 @@ button:hover {
 
 /*---------------------------------------Basic Calculator-------------------------------------*/
 
-.calc-2, .calc-3, .calc-4, .calc-5 {
-    width: min-content;
+.calc-1, .calc-2, .calc-3, .calc-4, .calc-5 {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: fit-content;
     padding: 20px;
+    border-radius: 25px;
+   
+}
+
+.calc-1 h1, .calc-2 h1, .calc-3 h1, .calc-4 h1, .calc-5 h1 {
+    text-align: center;
+    font-weight: 300;
 }
 
 .result-display {
