@@ -24,6 +24,7 @@ function updateRate() {
 new Glide(".glide", {
     startAt: 2,
     perView: 1,
+    gap: 0,
     animationDuration: 1000,
 }).mount();
         

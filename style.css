@@ -7,10 +7,11 @@
 
 body {
     background: linear-gradient(135deg, black 45%, burlywood);
+    height: 100vh;
 }
 
 .alphacontainer {
-    height: 100vh;
+    height: 100%;
     font-family: arial;
     color: white;
     display: flex;
@@ -170,7 +171,7 @@ button:hover {
     font-size: 30px;
 }
 
-/*---------------------------------------Basic Calculator-------------------------------------*/
+/*---------------------------------------Other Calculators-------------------------------------*/
 
 .calc-1, .calc-2, .calc-3, .calc-4, .calc-5 {
     position: relative;
@@ -273,7 +274,7 @@ button:hover {
 
 /*----------------------------------------The Number-Set Grids (Calc-4)---------------------------------------*/
 
-.calc-4 .result-display #topRBox, #middleRBox, #bottomRBox {
+.calc-4 .result-display #topRBox, .calc-4 .result-display #middleRBox, .calc-4 .result-display #bottomRBox {
     height: 33.3%;
 }
 
