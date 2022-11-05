@@ -23,6 +23,7 @@ body {
 #header-text {
     font-size: 80px;
     letter-spacing: 20px;
+    font-weight: 300;
 }
 
 .glide {
@@ -62,7 +63,7 @@ body {
 h1 {
     color: white;
     font-family: verdana;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 .calc-1, .calc-2, .calc-3, .calc-4, .calc-5 {
@@ -78,6 +79,7 @@ h1 {
 
 .calc-1 h1, .calc-2 h1, .calc-3 h1, .calc-4 h1, .calc-5 h1 {
     text-align: center;
+    font-weight: 300;
 }
 
 .form {
@@ -181,17 +183,195 @@ button:hover {
     font-size: 20px;
 }
 
+/*---------------------------------------Basic Calculator-------------------------------------*/
+
+.calc-2, .calc-3, .calc-4, .calc-5 {
+    width: min-content;
+    padding: 20px;
+}
+
+.result-display {
+    margin: auto;
+    position: relative;
+    width: 80%;
+    height: 100px;
+    margin-bottom: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.result-display div {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.result-display div p {
+    font-size: 30px;
+}
+
+#topRBox, #bottomRBox {
+    height: 50%;
+    color: white;
+}
+
+#topRBox {
+    border-bottom: 1px solid gray;
+}
+
+.number-set button {
+    font-size: 30px;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border:3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+/*----------------------------------------The Number-Set Grids-----------------------------------------*/
+
+.calc-2 .number-set {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 70px);
+}
+
+#equalsTo-2 {
+    height: auto;
+    border-radius: 30px;
+    grid-row: 4/6;
+    grid-column: 5/6;
+}
+
+.calc-2 .number-set #zero {
+    width: auto;
+    border-radius: 30px;
+    grid-column: 2/4;
+}
+
+.calc-3 .number-set {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 70px);
+}
+
+#equalsTo-3 {
+    height: auto;
+    border-radius: 30px;
+    grid-row: 4/6;
+    grid-column: 4/5;
+}
+
+.calc-4 .result-display #topRBox, #middleRBox, #bottomRBox {
+    height: 33.3%;
+}
+
+.calc-4 .result-display #middleRBox {
+    border-bottom: 1px solid gray;
+}
+
+.calc-4 .number-set, .calc-5 .number-set {
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 70px);
+}
+
+#equalsTo-4 {
+    height: auto;
+    border-radius: 30px;
+    grid-row: 4/6;
+    grid-column: 5/6;
+}
+
+.calc-5 .result-display {
+    height: 80px;
+}
+
+.calc-5 #rBox {
+    height: 100%;
+    border: none;
+}
+
+#fraction-set {
+    position: relative;
+    grid-row: 2/6;
+    grid-column: 1/5;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.calc-5 #whole-numbers {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 35px);
+}
+
+#whole-numbers button {
+    width: 45px;
+    height: 70px;
+    border-radius: 30px;
+    font-size: 25px;
+}
+
+#whole-numbers #zero {
+    width: 105px;
+    border-radius: 20px;
+    grid-column: 1/3;
+}
+
+.calc-5 #fraction-numbers {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+#numerator, #denominator {
+    display: grid;
+    grid-template-columns: repeat(4, 42.5px);
+}
+
+#numerator button, #denominator button {
+    width: 35px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+#numerator #zero, #denominator #zero {
+    height: auto;
+    grid-row: 1/3;
+    grid-column: 4/5;
+}
+
+#equalsTo-5 {
+    height: auto;
+    border-radius: 30px;
+    grid-row: 4/6;
+}
+
 footer {
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     font-size: 20px;
     text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
-    .square, .square2 {
-        display: none;
-    }
-
     h1 {
         margin: 8px 0 20px;
     }
