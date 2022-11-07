@@ -45,8 +45,8 @@
                             <br><br>
                 
                             <label for="years">No. of years</label>
-                            <select  id="years">
-                                <option value="1">1</option>
+                            <select id="years">
+                                <option id="firstSelect" value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -71,12 +71,14 @@
                 
                             <!-------Interest-------->
                             <button onclick="compute()">Compute Interest</button>
+                            <button id="resetAll" onclick="reset()">Reset</button>
                             <br><br>
                 
                             <span id="result">
                                 If you deposit : <br>
                                 at an interest rate of : <br>
                                 You will receive an amount of : <br>
+                                And your new total amount would be : <br>
                                 in the year : <br>
                             </span>
                             <br>
@@ -106,21 +108,21 @@
                             </div>
 
                             <div class="number-set">
-                                <button type="reset" name="clear" class="clear" value="ac">ac</button>
-                                <button value="+ / -">+ / -</button>
-                                <button name="modulud" class="modulus" value="%">%</button>
-                                <button name="divide" class="divide" value="/">/</button>
-                                <button name="multiply" class="multiply" value="x">x</button>
+                                <button type="reset" name="clear" id="clear" value="ac">ac</button>
+                                <button value="-">+ / -</button>
+                                <button name="modulus" class="operation" value="%">%</button>
+                                <button name="divide" class="operation" value="/">/</button>
+                                <button name="multiply" class="operation" value="x">x</button>
                                 <button value="(">(</button>
                                 <button value="7">7</button>
                                 <button value="8">8</button>
                                 <button value="9">9</button>
-                                <button value="-">-</button>
+                                <button class="operation" value="-">-</button>
                                 <button value=")">)</button>
                                 <button value="4">4</button>
                                 <button value="5">5</button>
                                 <button value="6">6</button>
-                                <button value="+">+</button>
+                                <button class="operation" value="+">+</button>
                                 <button value="x2">x<sup>2</sup></button>
                                 <button value="1">1</button>
                                 <button value="2">2</button>
@@ -142,35 +144,31 @@
                 
                         <div>
                             <div class="result-display">
-                                <div id="topRBox">
-                                    <p>0</p>
-                                </div>
+                                <div id="topRBox">0</div>
                                 
-                                <div id="bottomRBox">
-                                    <p>0</p>
-                                </div>
+                                <div id="bottomRBox">0</div>
                             </div>
 
                             <div class="number-set">
-                                <button type="reset" name="clear" class="clear" value="ac">ac</button>
-                                <button name="modulud" class="modulus" value="%">%</button>
-                                <button name="divide" class="divide" value="/">/</button>
-                                <button name="multiply" class="multiply" value="x">x</button>
-                                <button value="7">7</button>
-                                <button value="8">8</button>
-                                <button value="9">9</button>
-                                <button value="-">-</button>
-                                <button value="4">4</button>
-                                <button value="5">5</button>
-                                <button value="6">6</button>
-                                <button value="+">+</button>
-                                <button value="1">1</button>
-                                <button value="2">2</button>
-                                <button value="3">3</button>
-                                <button name="equalsTo" id="equalsTo-3" value="=">=</button>
-                                <button value="0">0</button>
-                                <button value=".">.</button>
-                                <button value="+ / -">+ / -</button>
+                                <button type="reset" name="clear" id="clear" value="ac">ac</button>
+                                <button name="modulus" class="operation" value="%">%</button>
+                                <button name="divide" class="operation" value="/">/</button>
+                                <button name="multiply" class="operation" value="*">x</button>
+                                <button class="operand" value="7">7</button>
+                                <button class="operand" value="8">8</button>
+                                <button class="operand" value="9">9</button>
+                                <button class="operation" value="-">-</button>
+                                <button class="operand" value="4">4</button>
+                                <button class="operand" value="5">5</button>
+                                <button class="operand" value="6">6</button>
+                                <button class="operation" value="+">+</button>
+                                <button class="operand" value="1">1</button>
+                                <button class="operand" value="2">2</button>
+                                <button class="operand" value="3">3</button>
+                                <button name="equalsTo" id="equalsTo-3">=</button>
+                                <button class="operand" value="0">0</button>
+                                <button class="operand" value=".">.</button>
+                                <button value="-">+ / -</button>
                             </div>
                         </div>
                     </li>
@@ -197,21 +195,21 @@
                             </div>
 
                             <div class="number-set">
-                                <button type="reset" name="clear" class="clear" value="ac">ac</button>
-                                <button value="+ / -">+ / -</button>
-                                <button name="modulud" class="modulus" value="%">%</button>
-                                <button name="divide" class="divide" value="/">/</button>
-                                <button name="multiply" class="multiply" value="x">x</button>
+                                <button type="reset" name="clear" id="clear" value="ac">ac</button>
+                                <button value="-">+ / -</button>
+                                <button name="modulus" class="operation" value="%">%</button>
+                                <button name="divide" class="operation" value="/">/</button>
+                                <button name="multiply" class="operation" value="*">x</button>
                                 <button value="(">(</button>
                                 <button value="7">7</button>
                                 <button value="8">8</button>
                                 <button value="9">9</button>
-                                <button value="-">-</button>
+                                <button class="operation" value="-">-</button>
                                 <button value=")">)</button>
                                 <button value="4">4</button>
                                 <button value="5">5</button>
                                 <button value="6">6</button>
-                                <button value="+">+</button>
+                                <button class="operation" value="+">+</button>
                                 <button value="xy">x<sup>y</sup></button>
                                 <button value="1">1</button>
                                 <button value="2">2</button>
