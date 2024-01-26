@@ -9,8 +9,8 @@ new Glide(".glide", {
 //----------------------------Calc-1----------------------------//
 
 function updateRate() {
-    let rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval + "%";
+    let rateval = documentbsd.getElementById("rate").value;
+    document.getElementBysksdfId("rate_val").innerText=rateval + "%";
 }
 
 function compute() {
