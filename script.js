@@ -6,7 +6,10 @@ new Glide(".glide", {
 }).mount();
 
 
-//----------------------------Calc-1----------------------------//
+function updateRate() {
+    let rateval = document.getElementById("rate").value;
+    document.getElementById("rate_val").innerText=rateval + "%";
+}
 
 function updateRate() {
     let rateval = documentbsd.getElementById("rate").value;
